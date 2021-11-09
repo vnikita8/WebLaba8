@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiSite</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <section id="title">
+        <div id="titleClass" class="container pb-0 mb-0 px-3 border-dark border-end border-bottom border-start">
+            <header class="d-flex flex-wrap justify-content-center py-3 mb-0">
+            <a href="" class="d-flex align-items-center mb-0 mb-md-0 me-md-auto text-dark text-decoration-none">
+                
+                <span class="titlehover fs-4 border-dark border-bottom">Vnikita Studios</span>
+            </a>
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="https://github.com/vnikita8/" class="btn btn-dark me-1">GitHub</a></li>
+                <li class="nav-item"><a href="https://vk.com/vnikita123456" class="btn btn-dark me-1">Vk</a></li>
+                <li class="nav-item"><a href="https://eios.kemsu.ru/a/eios" class="btn btn-dark me-1">EIOS</a></li>
+                <li class="nav-item"><a href="https://kemsu.ru" class="btn btn-dark me-1">Kemsu</a></li>
+            </ul>
+            </header>
+      </div>
+    </section>
+
+    <section id="features" class="mx-5 me-5">
+        <div class="row justify-content-evenly py-5">
+          <div class="col-md-2 text-center">
+            <img src="images/1_1(noback).png" alt="logomy" width="70%">
+          </div>
+          <div class="col-md-2 text-center">
+            <img class="pb-1" src="images/logo2.png" alt="logo2" width="70%">
+          </div>
+        </div>
+    </section>
+
+    <section class="LoveSection text-center mx-5 me-5 border-dark border">
+          <header>Нумерологическая совместимость</header>
+        <div class="container p-2">
+            <div class="col justify-content-center">
+                <div class="row justify-content-center text-center">
+                    <table class="table-active w-25">
+                        <tr>
+                            <th>Имя 1</th>
+                            <th>Имя 2</th>
+                        </tr>
+                        <tr>
+                            <td><input id="Name1"></td>
+                            <td><input id="Name2"></td>
+                            
+                        </tr>
+                    </table>
+                </div>
+              <div class="row justify-content-center">
+                <button type="submit" id = "yearButton" class="btn btn-dark btn-sm" style="width: 380px;" onclick="Compatibility()">Проверить совместимость</button>
+              </div>
+            <div class="row m-3">
+                <div class="card" >
+                    <div class="card-body text-start">
+                      <h5 class="card-title text-center" id="LoveResult"></h5>
+                      <a href="https://gadalkindom.ru/sovmestimost/po-imenam.html" class=" text-decoration-none"><h6 class="InfoLoveLink card-subtitle mb-2 text-muted border-bottom border-top p-1 text-center">Описание</h6></a>
+                      <p class="card-text" id="LoveText">Текст.</p>
+                    </div>
+                  </div>
+            </div>
+            </div>
+    </section>
+
+    <section id="pricing" class="text-center">
+        <div class="cardsTitle m-3"><h2> Калькуляторы</h2></div>
+        <div class="row justify-content-center pt-2">
+            <div class="card-group justify-content-center">
+            <div class="card mx-5 border-dark border">
+              <div class="card-header"> <h4 class="card-title">ИМТ-калькулятор</h4> </div>
+              <div class="card-body d-grid gap-2">
+                <table class="table-active">
+                  <tr>
+                      <th><h5 class="card-title">Рост</h5></th>
+                      <th><h5 class="card-title">Вес</h5></th>
+                  </tr>
+                  <tr>
+                      <td><p class="card-text"><input id="height"></p></td>
+                      <td><p class="card-text"><input id="weight"></p></td>
+                  </tr>
+              </table>
+                </div>
+              <button type="btn btn-primary" class="btn btn-dark" id = "yearButton" onclick="BMI()">Посчитать ИМТ</button>
+              <div class="card-footer">
+                <small class="text-body d-flex justify-content-center m-0 p-0" style="height: 20px;">
+                  <p>ИМТ =&nbsp</p>
+                  <p id="BmiResult" style="color: black;"></p>
+                </small>
+              </div>
+            </div>
+            <div class="card me-5 border-dark border">
+              <div class="card-header"><h4 class="card-title">Является ли год високосным?</h4></div>
+              <div class="card-body d-grid gap-2 align-content-center">
+                <h5 class="card-title">Год</h5>
+                <p class="card-text"><input name="year" id="year" width="10"></p>
+              </div>
+              <button type="btn btn-primary" class="btn btn-dark" id = "yearButton" onclick="YearType()">Определить</button>
+              <div class="card-footer">
+                <small class="text-body d-flex justify-content-center m-0 p-0" style="height: 20px;">
+                  <p>Год &nbsp</p>
+                  <p id = "yearResult"></p>
+                </small>
+              </div>
+            </div>
+          </div>
+    </section>
+  
+  <section class="LoveSection text-center my-4 mx-5 me-5 pb-3 border-dark border">
+    <header>Кто будет оплачивать ужин?</header>
+    <div class="row mx-5 my-3">
+      <div class="col justify-content-center ">
+        <div class="card">
+          <div class="card-header" id="PayCard">
+            Имена
+          </div>
+          <div class="card-body">
+            
+            <textArea id="NamesInput" style="width: 400px; height: 180px;"></textArea>
+          </div>
+        </div>
+      </div>
+      <div class="col justify-content-center align-self-center">
+        <div class="row justify-content-center"><button type="btn btn-primary" class="btn btn-dark mt-1 w-75" id = "PaymentButton" onclick="RandomPayment()">Определить</button></div>
+      </div>
+      
+      <div class="col justify-content-center align-self-center">
+        <div class="card">
+          <div class="card-header" id="PayCard">
+            Оплачивать будет:
+          </div>
+          <div class="card-body">
+            <div class="card-title"><p id="PayReturn"></p></div>
+            <p class="card-text border-top pt-3">Посочувствуем :(</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    
+  <script src="script.js"></script>
+</body>
+</html>
